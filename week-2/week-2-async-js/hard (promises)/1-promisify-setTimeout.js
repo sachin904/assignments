@@ -3,6 +3,11 @@
 */
 
 function wait(n) {
+    return new Promise(resolve=>setTimeout(resolve,n));
 }
-
+function callback()
+{
+    console.log("hello");
+}
+wait(4000).then(callback);
 module.exports = wait;
